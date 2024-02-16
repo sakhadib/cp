@@ -4,6 +4,8 @@ typedef long long ll;
 ll inf = 1e9;
 ll neg_inf = -1e9;
 
+#define mod 1000000007
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -19,18 +21,14 @@ int main() {
     ll n;
     cin >> n;
 
-    cout << n << " ";
+    ll ans = 1;
 
-    while(n!=1){
-        if(n % 2 == 0){
-            n /= 2;
-        }
-        else{
-            n = n * 3 + 1;
-        }
-        cout << n << " ";
+    for(ll i=0; i<n; i++){
+        ans *= 2;
+        ans %= mod;
     }
 
+    cout << ans << endl;
 
     
     return 0;

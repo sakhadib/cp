@@ -19,16 +19,10 @@ int main() {
     ll n;
     cin >> n;
 
-    cout << n << " ";
+    cout << 0 << endl;
 
-    while(n!=1){
-        if(n % 2 == 0){
-            n /= 2;
-        }
-        else{
-            n = n * 3 + 1;
-        }
-        cout << n << " ";
+    for(ll i=2; i<= n; i++){
+        cout << (i*i) * (i*i-1) / 2 - 4*(i-1)*(i-2) << endl;
     }
 
 

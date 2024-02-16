@@ -3,6 +3,7 @@
 typedef long long ll;
 ll inf = 1e9;
 ll neg_inf = -1e9;
+#define mod 1000000007
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -16,19 +17,17 @@ int main() {
     // ofstream out("../output.txt");
     // cout.rdbuf(out.rdbuf());
 
-    ll n;
-    cin >> n;
-
-    cout << n << " ";
-
-    while(n!=1){
-        if(n % 2 == 0){
-            n /= 2;
+    ll t;
+    cin >> t;
+    while(t--){
+        ll x, y;
+        cin >> x >> y;
+        if((x+y)%3 != 0 || x > 2*y || y > 2*x){
+            cout << "NO" << endl;
         }
         else{
-            n = n * 3 + 1;
+            cout << "YES" << endl;
         }
-        cout << n << " ";
     }
 
 

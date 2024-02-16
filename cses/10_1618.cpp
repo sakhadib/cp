@@ -3,6 +3,7 @@
 typedef long long ll;
 ll inf = 1e9;
 ll neg_inf = -1e9;
+#define mod 1000000007
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -19,17 +20,12 @@ int main() {
     ll n;
     cin >> n;
 
-    cout << n << " ";
-
-    while(n!=1){
-        if(n % 2 == 0){
-            n /= 2;
-        }
-        else{
-            n = n * 3 + 1;
-        }
-        cout << n << " ";
+    ll count = 0;
+    for(ll i = 5; n/i >= 1; i *= 5){
+        count += n/i;
     }
+
+    cout << count << endl;
 
 
     
